@@ -4,7 +4,7 @@ require_relative './part_1_solution.rb'
  def apply_coupons(cart, coupons) 
    coupons.each do |coupon| 
     coupon.each do |attribute, value| 
-      name = coupon[:item] 
+      name = cart[:item] 
     
       if cart[name] && cart[name][:count] >= coupon[:num] 
         if cart["#{name} W/COUPON"] 
